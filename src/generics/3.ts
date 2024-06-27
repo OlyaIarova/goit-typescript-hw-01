@@ -1,4 +1,4 @@
-function merge<T, U>(objA: T, objB: U): T & U { //T і U дозволяють працювати з об'єктами будь-яких типів.T & U повертає новий об'єкт, з властивостями об'єктів objA і objB.
+function merge<T extends object, U extends object>(objA: T, objB: U): T & U { //T і U дозволяють працювати з об'єктами будь-яких типів.T & U повертає новий об'єкт, з властивостями об'єктів objA і objB.
   return Object.assign({}, objA, objB); //новий об'єкт, поєднує властивості обох об'єктів
 }
 export { };
